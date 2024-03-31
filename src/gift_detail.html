@@ -105,12 +105,12 @@
         <!-- popup -->
 		<div class="popup_wrap" id="giftAppPopup">
 			<div class="bg_dim"></div>
-			<div class="popup_item">
+			<div class="popup_item full_type">
 				<div class="popup_title_row">
 					<h3 class="popup_title">신청하기</h3>
 				</div>
 				<div class="popup_contents_row">
-                    <div clsas="info_liquid_block_wrap">
+                    <div class="info_liquid_block_wrap">
                         <div class="info_liquid_block">
                             <div class="info_liquid_title">상품 정보</div>
                             <div class="info_liquid_contents">
@@ -160,7 +160,7 @@
                                     <table class="form_view_table">
                                         <tbody>
                                             <tr>
-                                                <th scope="col"><span class="fv_key">받으시는 분 선택</span></th>
+                                                <th scope="col"><span class="fv_key">받으시는 <br>분 선택</span></th>
                                                 <td>
                                                     <ul class="props_item_list">
                                                         <li>
@@ -174,17 +174,17 @@
                                             </tr>
                                             <tr>
                                                 <th scope="col"><span class="fv_key">이름</span></th>
-                                                <td><input type="text" class="form_input respon_item" data-pcwid="120" style="width:120px;"></td>
+                                                <td><input type="text" class="form_input" data-pcwid="120" style="width:120px;"></td>
                                             </tr>
                                             <tr>
                                                 <th scope="col"><span class="fv_key">연락처</span></th>
                                                 <td>
                                                     <ul class="inform_item_list">
-                                                        <li><input type="text" class="form_input respon_item" data-pcwid="120" style="width:120px;"></li>
+                                                        <li><input type="text" class="form_input" data-pcwid="120" style="width:120px;"></li>
                                                         <li class="else"><span class="inform_else">-</span></li>
-                                                        <li><input type="text" class="form_input respon_item" data-pcwid="120" style="width:120px;"></li>
+                                                        <li><input type="text" class="form_input" data-pcwid="120" style="width:120px;"></li>
                                                         <li class="else"><span class="inform_else">-</span></li>
-                                                        <li><input type="text" class="form_input respon_item" data-pcwid="120" style="width:120px;"></li>
+                                                        <li><input type="text" class="form_input" data-pcwid="120" style="width:120px;"></li>
                                                     </ul>
                                                     <p class="indent_para">
                                                         <span class="indent_bullet">※</span>
@@ -197,7 +197,7 @@
                                                 <td>
                                                    <div class="td_inner_block">
                                                         <ul class="inform_item_list type2">
-                                                            <li><input type="text" class="form_input respon_item" data-pcwid="120" style="width:120px;"></li>
+                                                            <li><input type="text" class="form_input" data-pcwid="120" style="width:120px;"></li>
                                                             <li><button class="btn_inform_box">주소찾기</button></li>
                                                         </ul>
                                                    </div>
@@ -210,18 +210,18 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="col"><span class="fv_key">배송시<br>요청사항</span></th>
+                                                <th scope="col"><span class="fv_key">배송시 <br>요청사항</span></th>
                                                 <td>
                                                     <textarea rows="10" cols="10" class="fv_ta"></textarea>
-                                                    <p class="indent_para">
-                                                        <span class="indent_bullet">※</span>
-                                                        <span class="indent_liquid">감사선물 신청, 취소, 변경 시 ‘신청인’ 항목에 기재된 핸드폰으로 안내 문자가 발송됩니다.</span>
-                                                    </p>
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
+                                <p class="indent_para">
+                                    <span class="indent_bullet">※</span>
+                                    <span class="indent_liquid">감사선물 신청, 취소, 변경 시 ‘신청인’ 항목에 기재된 핸드폰으로 안내 문자가 발송됩니다.</span>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -236,7 +236,7 @@
 		</div>
         <div class="popup_wrap" id="giftAppEndPopup">
             <div class="bg_dim"></div>
-			<div class="popup_item">
+			<div class="popup_item full_type">
 				<div class="popup_title_row">
 					<h3 class="popup_title">신청완료</h3>
 				</div>
@@ -245,7 +245,7 @@
                         <p class="app_message_main">“신청이 정상적으로 완료되었습니다.”</p>
                         <p class="app_message_sub">신청취소는 신청일다음날까지만 가능합니다.</p>
                     </div>
-                    <div clsas="info_liquid_block_wrap">
+                    <div class="info_liquid_block_wrap">
                         <div class="info_liquid_block">
                             <div class="info_liquid_title">신청정보 확인</div>
                             <div class="info_liquid_contents">
@@ -281,7 +281,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="info_liquid_block">
+                        <!-- <div class="info_liquid_block">
                             <div class="info_liquid_title">신청자(회원)</div>
                             <div class="info_liquid_contents">
                                 <div class="form_view_table_wrap">
@@ -299,13 +299,14 @@
                                     </table>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="btn_bottom_wrap">
                         <!-- close_trigger 있을시 닫기 -->
                         <a href="#" class="btn_submit_box primary close_trigger"><span class="btn_submit_box_text">확인</span></a>
                     </div>
                 </div>
+                <a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
             </div>
         </div>
         <div class="popup_wrap" id="giftModalPopup">
@@ -313,7 +314,7 @@
 			<div class="popup_item modal_type">
 				<div class="popup_modal_box">
                     <div class="popup_modal_para_wrap">
-                        <p class="popup_modal_para">입력한 정보가 잘못되었습니다. 다시 확인해주세요.</p>
+                        <p class="popup_modal_para">입력한 정보가 잘못되었습니다. <br>다시 확인해주세요.</p>
                     </div>
                     <div class="btn_bottom_wrap">
                         <!-- close_trigger 있을시 닫기 -->

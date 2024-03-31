@@ -27,6 +27,7 @@
 							<li><a href="#" class="header_util">PB <strong>이정재 고객님(nh12345678)</strong></a></li>
 							<li><a href="#" class="header_util">로그아웃</a></li>
 						</ul>
+						<a href="#" class="header_util_ico"></a>
 					</div>
 				</hgroup>
 			</div>
@@ -55,6 +56,7 @@
 				<div class="mobile_panel_dim"></div>
 				<div class="mobile_panel_wrap">
 					<div class="mbutil_row">
+						<a href="#" class="header_util_ico"></a>
 						<ul class="mbutil_hlist">
 							<li><a href="#" class="mbutil">로그아웃</a></li>
 							<li><a href="#" class="mbutil">PB <strong>이정재 고객님(nh12345678)</strong></a></li>
@@ -94,32 +96,36 @@
 				<div class="popup_contents_row">
 					<div class="data_intro_copy_wrap">
 						<p class="data_intro_copy">고객 정보 수정이 필요한 경우 <br>NH투자증권 고객센터 02.000.0000 로 연락주시기 바랍니다.</p>
-						<div class="data_table_wrap">
-							<table class="data_table">
-								<tbody>
-									<tr>
-										<th scope="col"><span class="data_thtext">이름</span></th>
-										<td><span class="data_tdtext">이정재(nh123456789)</span></td>
-									</tr>
-									<tr>
-										<th scope="col"><span class="data_thtext">연락처</span></th>
-										<td><span class="data_tdtext">010-1234-5678</span></td>
-									</tr>
-									<tr>
-										<th scope="col"><span class="data_thtext">지점</span></th>
-										<td><span class="data_tdtext">서울 강남 지점</span></td>
-									</tr>
-									<tr>
-										<th scope="col"><span class="data_thtext">담당PB</span></th>
-										<td><span class="data_tdtext">정우성</span></td>
-									</tr>
-									<tr>
-										<th scope="col"><span class="data_thtext">PB연락처</span></th>
-										<td><span class="data_tdtext">010-9876-5432</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
+					</div>
+					<div class="data_table_wrap">
+						<table class="data_table">
+							<tbody>
+								<tr>
+									<th scope="col"><span class="data_thtext">이름</span></th>
+									<td><span class="data_tdtext">이정재(nh123456789)</span></td>
+								</tr>
+								<tr>
+									<th scope="col"><span class="data_thtext">연락처</span></th>
+									<td><span class="data_tdtext">010-1234-5678</span></td>
+								</tr>
+								<tr>
+									<th scope="col"><span class="data_thtext">지점</span></th>
+									<td><span class="data_tdtext">서울 강남 지점</span></td>
+								</tr>
+								<tr>
+									<th scope="col"><span class="data_thtext">담당PB</span></th>
+									<td><span class="data_tdtext">정우성</span></td>
+								</tr>
+								<tr>
+									<th scope="col"><span class="data_thtext">PB연락처</span></th>
+									<td><span class="data_tdtext">010-9876-5432</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btn_bottom_wrap">
+						<!-- close_trigger 있을시 닫기 -->
+						<a href="#" class="btn_submit_box primary close_trigger"><span class="btn_submit_box_text">확인</span></a>
 					</div>
 				</div>
 				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
@@ -147,6 +153,17 @@
 
 				if (url_2 === "member_popup") {
 					memberPopup.popupShow(); // show
+				}
+
+				let member_layer_call = document.querySelectorAll(".member_layer_call");
+				if (!!member_layer_call) {
+					member_layer_call.forEach((item) => {
+						console.log(11);
+						item.addEventListener("click", (e) => {
+							e.preventDefault();
+							memberPopup.popupShow(); // show
+						});
+					});
 				}
 			});
 		</script>
@@ -193,7 +210,7 @@
 							<li>신청고객: 1명</li>
 						</ul>
 					</div>
-					<div clsas="board_list_table_wrap">
+					<div class="board_list_table_wrap">
 						<table class="board_list_table">
 							<thead>
 								<tr>
@@ -508,19 +525,19 @@
 					</ul>
 				</div>
 				<div class="footer_item_wrap">
-					<div class="footer_item">
-						<span class="footer_logo"><img src="./assets/images/bottom_logo.jpg" alt="NH투자증권"></span>
+					<div class="footer_item has_logo">
+						<span class="footer_logo"><img src="./assets/images/bottom_logo.png" alt="NH투자증권"></span>
 					</div>
-					<div class="footer_item">
+					<div class="footer_item has_com">
 						<span class="footer_company">NH투자증권</span>
 						<p class="footer_copy">COPYRIGHT(C) NH INVESTMENT & SECURITIES CO.,LTD.ALL RIGHTS RESERVED.</p>
 					</div>
-					<div class="footer_item">
+					<div class="footer_item has_cus">
 						<div class="footer_else_key">VIP멤버십 고객센터</div>
 						<div class="footer_else_value">
 							<ul class="footer_guide_list">
 								<li>TEL<br>02-517-7813</li>
-								<li>평일 09:00 ~ 18:00<br>주말 및 공휴일 휴무</li>
+								<li class="long">평일 09:00 ~ 18:00 <br>주말 및 공휴일 휴무</li>
 							</ul>
 						</div>
 					</div>
@@ -531,12 +548,12 @@
 		<!-- popup -->
 		<div class="popup_wrap" id="giftAppPopup">
 			<div class="bg_dim"></div>
-			<div class="popup_item">
+			<div class="popup_item full_type">
 				<div class="popup_title_row">
 					<h3 class="popup_title">신청하기</h3>
 				</div>
 				<div class="popup_contents_row">
-					<div clsas="info_liquid_block_wrap">
+					<div class="info_liquid_block_wrap">
 						<div class="info_liquid_block">
 							<div class="info_liquid_title">상품 선택</div>
 							<div class="info_liquid_contents">
@@ -544,13 +561,13 @@
 									<li>
 										<div class="props_item">
 											<input type="checkbox" class="props_form_orgin" id="product_choice_01">
-											<label for="props_form_01" class="props_form_label">서울 신라호텔 더파크뷰 바우처&와인 2BTL</label>
+											<label for="product_choice_01" class="props_form_label">서울 신라호텔 더파크뷰 바우처&와인 2BTL</label>
 										</div>
 									</li>
 									<li>
 										<div class="props_item">
 											<input type="checkbox" class="props_form_orgin" id="product_choice_02">
-											<label for="props_form_02" class="props_form_label">서울 신라호텔 더파크뷰 바우처&와인 1BTL</label>
+											<label for="product_choice_02" class="props_form_label">서울 신라호텔 더파크뷰 바우처&와인 1BTL</label>
 										</div>
 									</li>
 									<li>
@@ -612,7 +629,7 @@
 									<table class="form_view_table">
 										<tbody>
 											<tr>
-												<th scope="col"><span class="fv_key">받으시는 분 선택</span></th>
+												<th scope="col"><span class="fv_key">받으시는 <br>분 선택</span></th>
 												<td>
 													<ul class="props_item_list">
 														<li>
@@ -626,17 +643,17 @@
 											</tr>
 											<tr>
 												<th scope="col"><span class="fv_key">이름</span></th>
-												<td><input type="text" class="form_input respon_item" data-pcwid="120" style="width:120px;"></td>
+												<td><input type="text" class="form_input" data-pcwid="120" style="width:120px;"></td>
 											</tr>
 											<tr>
 												<th scope="col"><span class="fv_key">연락처</span></th>
 												<td>
 													<ul class="inform_item_list">
-														<li><input type="text" class="form_input respon_item" data-pcwid="120" style="width:120px;"></li>
+														<li><input type="text" class="form_input" data-pcwid="120" style="width:120px;"></li>
 														<li class="else"><span class="inform_else">-</span></li>
-														<li><input type="text" class="form_input respon_item" data-pcwid="120" style="width:120px;"></li>
+														<li><input type="text" class="form_input" data-pcwid="120" style="width:120px;"></li>
 														<li class="else"><span class="inform_else">-</span></li>
-														<li><input type="text" class="form_input respon_item" data-pcwid="120" style="width:120px;"></li>
+														<li><input type="text" class="form_input" data-pcwid="120" style="width:120px;"></li>
 													</ul>
 													<p class="indent_para">
 														<span class="indent_bullet">※</span>
@@ -649,7 +666,7 @@
 												<td>
 													<div class="td_inner_block">
 														<ul class="inform_item_list type2">
-															<li><input type="text" class="form_input respon_item" data-pcwid="120" style="width:120px;"></li>
+															<li><input type="text" class="form_input" data-pcwid="120" style="width:120px;"></li>
 															<li><button class="btn_inform_box">주소찾기</button></li>
 														</ul>
 													</div>
@@ -692,7 +709,7 @@
 		</div>
 		<div class="popup_wrap" id="giftAppEndPopup">
 			<div class="bg_dim"></div>
-			<div class="popup_item">
+			<div class="popup_item full_type">
 				<div class="popup_title_row">
 					<h3 class="popup_title">신청완료</h3>
 				</div>
@@ -701,77 +718,7 @@
 						<p class="app_message_main">“신청이 정상적으로 완료되었습니다.”</p>
 						<p class="app_message_sub">신청취소는 신청일다음날까지만 가능합니다.</p>
 					</div>
-					<div clsas="info_liquid_block_wrap">
-						<div class="info_liquid_block">
-							<div class="info_liquid_title">신청정보 확인</div>
-							<div class="info_liquid_contents">
-								<div class="form_view_table_wrap">
-									<table class="form_view_table">
-										<tbody>
-											<tr>
-												<th scope="col"><span class="fv_key">신청일자</span></th>
-												<td><span class="fv_value">2024.03.30 00:00:00</span></td>
-											</tr>
-											<tr>
-												<th scope="col"><span class="fv_key">상품명</span></th>
-												<td><span class="fv_value">(갤러리아) 명품 한우세트 강진맥우</span></td>
-											</tr>
-											<tr>
-												<th scope="col"><span class="fv_key">신청자</span></th>
-												<td><span class="fv_value">이정재(nh123456789)</span></td>
-											</tr>
-											<tr>
-												<th scope="col"><span class="fv_key">지점명</span></th>
-												<td><span class="fv_value">강남 지점</span></td>
-											</tr>
-											<tr>
-												<th scope="col"><span class="fv_key">배송정보</span></th>
-												<td><span class="fv_value">이정재 010-1234-5678<br>06673 서울 서초구 서초대로 88 5층 어질리티코리아</span></td>
-											</tr>
-											<tr>
-												<th scope="col"><span class="fv_key">배송시<br>요청사항</span></th>
-												<td><span class="fv_value">배송시요청사항 내용</span></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-						<div class="info_liquid_block">
-							<div class="info_liquid_title">신청자(회원)</div>
-							<div class="info_liquid_contents">
-								<div class="form_view_table_wrap">
-									<table class="form_view_table">
-										<tbody>
-											<tr>
-												<th scope="col"><span class="fv_key">이름</span></th>
-												<td><span class="fv_value">이정재</span></td>
-											</tr>
-											<tr>
-												<th scope="col"><span class="fv_key">연락처</span></th>
-												<td><span class="fv_value">010-1234-5678</span></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="btn_bottom_wrap">
-						<!-- close_trigger 있을시 닫기 -->
-						<a href="#" class="btn_submit_box primary close_trigger"><span class="btn_submit_box_text">확인</span></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="popup_wrap" id="giftAppDeliveryPopup">
-			<div class="bg_dim"></div>
-			<div class="popup_item">
-				<div class="popup_title_row">
-					<h3 class="popup_title">배송정보</h3>
-				</div>
-				<div class="popup_contents_row">
-					<div clsas="info_liquid_block_wrap">
+					<div class="info_liquid_block_wrap">
 						<div class="info_liquid_block">
 							<div class="info_liquid_title">신청정보</div>
 							<div class="info_liquid_contents">
@@ -855,6 +802,101 @@
 						<a href="#" class="btn_submit_box primary close_trigger"><span class="btn_submit_box_text">확인</span></a>
 					</div>
 				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+			</div>
+		</div>
+		<div class="popup_wrap" id="giftAppDeliveryPopup">
+			<div class="bg_dim"></div>
+			<div class="popup_item full_type">
+				<div class="popup_title_row">
+					<h3 class="popup_title">배송정보</h3>
+				</div>
+				<div class="popup_contents_row">
+					<div class="info_liquid_block_wrap">
+						<div class="info_liquid_block">
+							<div class="info_liquid_title">신청정보</div>
+							<div class="info_liquid_contents">
+								<div class="form_view_table_wrap">
+									<table class="form_view_table">
+										<tbody>
+											<tr>
+												<th scope="col"><span class="fv_key">회원 등급</span></th>
+												<td><span class="fv_value">Premier Blue Members 플러스</span></td>
+											</tr>
+											<tr>
+												<th scope="col"><span class="fv_key">신청일자</span></th>
+												<td><span class="fv_value">2024.03.30 00:00:00</span></td>
+											</tr>
+											<tr>
+												<th scope="col"><span class="fv_key">상품명</span></th>
+												<td><span class="fv_value">[현재백화점] 명품 한우세트 ‘암소NO.09’ & 발뮤다 플레이트 프로</span></td>
+											</tr>
+											<tr>
+												<th scope="col"><span class="fv_key">신청자</span></th>
+												<td><span class="fv_value">이정재(고객) / 이정재(PB)</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="info_liquid_block">
+							<div class="info_liquid_title">회원정보</div>
+							<div class="info_liquid_contents">
+								<div class="form_view_table_wrap">
+									<table class="form_view_table">
+										<tbody>
+											<tr>
+												<th scope="col"><span class="fv_key">회원 이름</span></th>
+												<td><span class="fv_value">이정재</span></td>
+											</tr>
+											<tr>
+												<th scope="col"><span class="fv_key">회원 전화번호</span></th>
+												<td><span class="fv_value">010-1234-5678</span></td>
+											</tr>
+											<tr>
+												<th scope="col"><span class="fv_key">지점명</span></th>
+												<td><span class="fv_value">강남 지점</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="info_liquid_block">
+							<div class="info_liquid_title">배송정보</div>
+							<div class="info_liquid_contents">
+								<div class="form_view_table_wrap">
+									<table class="form_view_table">
+										<tbody>
+											<tr>
+												<th scope="col"><span class="fv_key">받으시는분</span></th>
+												<td><span class="fv_value">이정재</span></td>
+											</tr>
+											<tr>
+												<th scope="col"><span class="fv_key">전화번호</span></th>
+												<td><span class="fv_value">010-1234-5678</span></td>
+											</tr>
+											<tr>
+												<th scope="col"><span class="fv_key">주소</span></th>
+												<td><span class="fv_value">06673 서울 서초구 서초대로 88 5층 어질리티코리아</span></td>
+											</tr>
+											<tr>
+												<th scope="col"><span class="fv_key">배송시<br>요청사항</span></th>
+												<td><span class="fv_value">배송시 요청사항 내용</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn_bottom_wrap">
+						<!-- close_trigger 있을시 닫기 -->
+						<a href="#" class="btn_submit_box primary close_trigger"><span class="btn_submit_box_text">확인</span></a>
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
 			</div>
 		</div>
 		<div class="popup_wrap" id="appModalPopup">
