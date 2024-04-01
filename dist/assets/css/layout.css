@@ -97,19 +97,21 @@
 .middle_sub_map_list > li:last-of-type{}
 .middle_sub_map_list > li:last-of-type:after{display:none;}
 .middle_sub_map{color:#444444;}
-.sv_wrap{background:url("../images/bg_sv.png") no-repeat 0 0/cover;position:relative;overflow:hidden;}
+.sv_wrap{background:url("../images/bg_sv.jpg") no-repeat 0 0/cover;position:relative;overflow:hidden;}
 .sv_wrap.skin2{background-image:url("../images/bg_sv2.png");min-height:210px;outline:1px solid #b0924f;outline-offset: -20px;}
 .sv_wrap.skin2:before,
 .sv_wrap.skin2:after{display:block;content:'';position:absolute;top:0;background-repeat:no-repeat;background-size:cover; background-position:0 0;}
 .sv_wrap.skin2:before{left:0;width:156px;height:176px;background-image:url("../images/ribon_01.png");}
 .sv_wrap.skin2:after{right:0;width:168px;height:100%;background-image:url("../images/ribon_02.png");}
-.sv_inner{padding:54px 71px;}
+.sv_wrap.skin2 .sv_inner{padding:54px 71px;}
+.sv_inner{padding:40px 60px;}
 .sv_logo{max-width:320px;}
 .sv_logo img{vertical-align: top;}
 .sv_copy{margin-top:28px;color:#fff; font-weight:300; font-size:20px; line-height:1.4;}
 .sv_copy strong{font-weight:500;}
 
 .sc_wrap{padding:40px 60px 0;}
+.sc_wrap.type2{padding:0;}
 
 @media (max-width:1023px){
     .header_util{max-width:200px}
