@@ -198,7 +198,7 @@
 									</div>
 								</div>
 								<div class="detail_summary_spec_item">
-									<a href="#" class="btn_card_box">신청하기</a>
+									<a href="#" class="btn_card_box" id="btn_app">신청하기</a>
 								</div>
 							</div>
 						</div>
@@ -244,6 +244,11 @@
 
 					},
 					closeCallback() {}
+				});
+
+				// 이벤트
+				document.querySelector("#btn_app").addEventListener("click", () => {
+					giftAppPopup.popupShow(); // show
 				});
 
 				// 퍼블 확인용
