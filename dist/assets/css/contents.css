@@ -152,7 +152,7 @@ input.form_input{font-size:14px;appearance: none;-webkit-appearance: none;line-h
 .gallery_item:hover .gallery_thum_layer{display:flex;}
 .gallery_thum{height:0;position:relative;padding-bottom:77.38515901060071%}
 img.gallery_thum_bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit: cover;object-position: 50% 50%;}
-.gallery_thum_layer{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);display:none; align-items: center; justify-content: center;}
+.gallery_thum_layer{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);display:none; align-items: center; justify-content: center;box-sizing: border-box;padding:10px;}
 .btn_gallery_link{display:flex;background:#fff; color:#b0924f; max-width:140px; width:100%; text-align: center; justify-content: center; min-height:30px; padding:10px; box-sizing: border-box; margin:0 auto;}
 .gallery_spec{margin-top:20px;}
 .gallery_spec_para{font-size:18px; font-weight:300; color:#332d29; line-height:1.3; word-break:break-all;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp:2; overflow: hidden;max-width:100%;}
