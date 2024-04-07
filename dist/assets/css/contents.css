@@ -49,7 +49,7 @@ input.form_input{font-size:14px;appearance: none;-webkit-appearance: none;line-h
 .mv_banner_btn{display:inline-block;border:1px solid #ffffff; padding:11px 20px;color:#fff;}
 .mv_banner_btn:after{display:inline-block;content:">";margin-left:10px;}
 .mc_contents{}
-.mc_inner_wrap{padding:40px 60px;}
+.mc_inner_wrap{padding:40px 60px 0;}
 .customer_card_box{background:#ebe4d3;padding:20px;text-align: center;}
 .customer_card_main{font-size:24px; font-weight:700;}
 .cus_card_key{color:#b09350;}
@@ -81,7 +81,7 @@ input.form_input{font-size:14px;appearance: none;-webkit-appearance: none;line-h
 .popup_wrap.modal_type .popup_contents_row{}
 
 .popup_modal_box{padding:65px 100px 40px;text-align: center;}
-.popup_modal_box .btn_bottom_wrap{margin-top:20px;}
+.popup_modal_box .btn_bottom_wrap{margin-top:30px;}
 .popup_modal_para_wrap{}
 .popup_modal_para{font-size:24px;color:#555555; line-height:1.4;}
 
@@ -184,7 +184,7 @@ img.gallery_thum_bg{position:absolute;top:0;left:0;width:100%;height:100%;object
 
 .btn_card_box{display:block;background:#b0924f;font-size:24px;font-weight:500;padding:15px;color:#fff;text-align: center;}
 
-.app_message_wrap{text-align: center;padding:10px 0 50px;}
+.app_message_wrap{text-align: center;padding:10px 0 40px;}
 .app_message_main{font-size:32px;color:#b0924f; font-weight:700; word-break: keep-all;}
 .app_message_sub{font-size:24px;color:#555555; font-weight:300;margin-top:5px;}
 
@@ -324,10 +324,10 @@ input.formt_input{}
 .board_list_table_wrap{}
 .board_list_table{width:100%;border-bottom:1px solid #555555;}
 .board_list_table thead{}
-.board_list_table thead tr th{background:#b0924f;border-top:1px solid #676154;padding:10px 15px;}
+.board_list_table thead tr th{background:#b0924f;border-top:1px solid #676154;padding:10px 7px;}
 .board_list_table thead tr th:last-of-type{}
 .board_thtext{color:#fff; font-size:14px; font-weight:500; display:inline-block;white-space: nowrap;}
-.board_list_table tbody td{border-bottom:1px solid #e8e8e8;padding:10px;}
+.board_list_table tbody td{border-bottom:1px solid #e8e8e8;padding:10px 7px;}
 .board_list_table tbody td.bg_type2{background:#ebe4d3;}
 .board_list_table tbody td.td_dd_value_mb{display:none;}
 .board_list_table tbody td:last-of-type{}
@@ -349,7 +349,7 @@ input.formt_input{}
 .props_block_list > li{margin-bottom:10px;}
 .props_block_list > li:last-of-type{margin-bottom:0;}
 .props_block_list .props_item{}
-.props_block_list .props_form_label{font-size:20px; font-weight:500; font-weight:500;padding-top:1px;}
+.props_block_list .props_form_label{font-size:20px; font-weight:500;padding-top:1px;}
 
 
 .terms_guide_wrap{}
@@ -557,7 +557,7 @@ input.formt_input{}
     .board_list_table tbody td.respon_long .td_dl_item{width:100%;}
     .board_list_table tbody td.respon_long .td_dl_item dd{text-align: left; flex:1;}
     .board_list_table tbody td.respon_hidden{display:none;}
-    .board_list_table tbody td.respon_btn{flex:0 0 50%;}
+    .board_list_table tbody td.respon_btn{flex:0 0 100%;}
     .board_list_table tbody td.respon_btn .td_dl_item dt{display:none;}
     .board_list_table tbody td.respon_btn .td_dl_item{width:100%;}
     .board_list_table tbody td.respon_btn .td_dl_item .btn_board_box{width:100%;}
