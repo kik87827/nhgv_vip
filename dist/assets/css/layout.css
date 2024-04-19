@@ -112,6 +112,7 @@
 
 .sc_wrap{padding:40px 60px 0;}
 .sc_wrap.type2{padding:0;}
+.sc_wrap.type3{padding:40px 0 0;}
 
 @media (max-width:1023px){
     .header_util{max-width:200px}
@@ -147,6 +148,7 @@
     .middle_sub_map_list{}
     .middle_sub_title{font-size:16px;}
     .sc_wrap{padding:25px 20px 0;}
+    .sc_wrap.type3{padding:25px 20px 0;}
 
     
     .sv_wrap.skin2{min-height:210px;outline-offset: -15px;}

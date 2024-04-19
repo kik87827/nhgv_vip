@@ -49,7 +49,7 @@ input.form_input{font-size:14px;appearance: none;-webkit-appearance: none;line-h
 .mv_banner_btn{display:inline-block;border:1px solid #ffffff; padding:11px 20px;color:#fff;}
 .mv_banner_btn:after{display:inline-block;content:">";margin-left:10px;}
 .mc_contents{}
-.mc_inner_wrap{padding:40px 60px 0;}
+.mc_inner_wrap{padding:40px 0 0;}
 .customer_card_box{background:#ebe4d3;padding:20px;text-align: center;}
 .customer_card_main{font-size:24px; font-weight:700;}
 .cus_card_key{color:#b09350;}
@@ -142,7 +142,7 @@ input.form_input{font-size:14px;appearance: none;-webkit-appearance: none;line-h
 .member_guide_text{font-size:18px; color:#555555; margin-top:2px;}
 .member_else_guide_para{font-size:18px; color:#555555; word-break: keep-all;margin:20px 15px 0;}
 
-.pro_info_wrap{margin:40px 0 0 15px;display:flex;gap:45px;}
+.pro_info_wrap{margin:40px 0 0 60px;display:flex;gap:45px;}
 .pro_info_spec{flex:1;line-height:1.3;}
 .pro_info_spec_main{font-size:24px; font-weight:700; color:#b0924f;}
 .pro_info_spec_sub{margin-top:10px;font-size:18px; color:#555555;}
