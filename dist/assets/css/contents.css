@@ -616,3 +616,54 @@ input.formt_input{}
     .terms_indent_list{}
     .terms_indent_list > li{margin-bottom:10px;}
 }
+
+
+/* survey */
+.survey_document_wrap{}
+.survey_swiper_zone{}
+.swiper-container.survey{}
+.swiper-container.survey .swiper-wrapper{}
+.swiper-container.survey .swiper-slide{}
+.survey_gate_wrap{}
+.survey_gate_top{}
+.survey_gate_title_wrap{}
+.survey_gate_title_main{}
+.survey_gate_title_sub{}
+.survey_gate_docu_title{}
+.survey_gate_bottom{}
+.survey_bottom_logo{}
+.survey_bottom_logo img{}
+
+.survey_docu_wrap{}
+.survey_docu_wrap.type2{}
+.survey_docu_inner{}
+.survey_docu_message{}
+.survey_title_row{}
+.survey_title_main{}
+.survey_title_bullet{}
+.survey_title_liquid{}
+.survey_title_sub{}
+.survey_title_sub strong{}
+.survey_form_row{}
+.survey_form_list{}
+.survey_form_list > li{}
+.survey_form_list > li:last-of-type{}
+.props_button{}
+.props_button.active{}
+textarea.survey_ta{}
+
+.props_item_list{}
+.props_item_list > li{}
+.props_item_list > li .props_button{}
+.props_item_list > li:last-of-type{}
+
+.swiper_pagination_layer{}
+.swiper_pagination_cols{}
+.swiper_fraction_cols{}
+.swiper_fraction_para{}
+.swiper_pagination_list{}
+.swiper_pagination_list > li{}
+.swiper_pagination_list > li:last-of-type{}
+.swiper_dot{}
+.swiper_dot.active{}
+/* // survey */
