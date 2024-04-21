@@ -260,7 +260,7 @@
 									<ul class="survey_form_list">
 										<li><button class="props_button">1. 네</button></li>
 										<li><button class="props_button">2. 아니요</button></li>
-										<li><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+										<li class="has_ta"><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
 									</ul>
 								</div>
 							</div>
@@ -279,7 +279,7 @@
 										<li><button class="props_button">1. 만족</button></li>
 										<li><button class="props_button">2. 보통</button></li>
 										<li><button class="props_button">3. 불만족</button></li>
-										<li><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+										<li class="has_ta"><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
 									</ul>
 								</div>
 							</div>
@@ -312,7 +312,7 @@
 												<li><button class="props_button">기타</button></li>
 											</ul>
 										</li>
-										<li><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+										<li class="has_ta"><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
 									</ul>
 								</div>
 							</div>
@@ -321,28 +321,10 @@
 							<div class="survey_docu_wrap">
 								<div class="survey_title_row">
 									<p class="survey_title_main"><span class="survey_title_bullet">04</span><span class="survey_title_liquid">향후 받고싶은 기프트가 있으면 말씀해 주세요.</span></p>
-									<p class="survey_title_sub">
-										향후 희망하거나 새롭게 추가되었으면 하는 카테고리를 선택해주세요. (중복선택 가능)
-									</p>
 								</div>
 								<div class="survey_form_row">
 									<ul class="survey_form_list">
-										<li><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="survey_docu_wrap">
-								<div class="survey_title_row">
-									<p class="survey_title_main"><span class="survey_title_bullet">04</span><span class="survey_title_liquid">향후 받고싶은 기프트가 있으면 말씀해 주세요.</span></p>
-									<p class="survey_title_sub">
-										향후 희망하거나 새롭게 추가되었으면 하는 카테고리를 선택해주세요. (중복선택 가능)
-									</p>
-								</div>
-								<div class="survey_form_row">
-									<ul class="survey_form_list">
-										<li><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+										<li class="has_ta"><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
 									</ul>
 								</div>
 							</div>
@@ -352,6 +334,7 @@
 								<div class="survey_docu_inner">
 									<p class="survey_docu_message">소중한 의견<br>감사합니다.</p>
 								</div>
+								<button class="btn_survey_close"></button>
 							</div>
 						</div>
 					</div>
@@ -377,6 +360,87 @@
 			document.addEventListener("DOMContentLoaded", () => {
 				surveyLayerFunc();
 			});
+
+
+
+			function surveyLayerFunc() {
+				const htmlElement = document.documentElement;
+				const bodyElement = document.body;
+				const survey_document_wrap = document.querySelector(".survey_document_wrap");
+				const survey_swiper_container = document.querySelector(".swiper-container.survey");
+				const survey_swiper_slide = survey_swiper_container.querySelectorAll(".swiper-slide");
+				const swiper_fraction_current = survey_document_wrap.querySelector(".swiper_fraction_current");
+				const swiper_fraction_length = survey_document_wrap.querySelector(".swiper_fraction_length");
+				const survey_swiper_slide_length = survey_swiper_slide.length;
+				const swiper_pagination_layer = document.querySelector(".swiper_pagination_layer");
+				const btn_survey_close = document.querySelector(".btn_survey_close");
+				if (!!survey_swiper_container) {
+
+					swiper_fraction_length.textContent = survey_swiper_slide_length - 2;
+					htmlElement.classList.add("touchDis");
+					let survey_swiper = new Swiper(".swiper-container.survey", {
+						on: {
+							init() {
+								console.log('init');
+								//controlFunc();
+							}
+						},
+						pagination: {
+							el: ".swiper_pagination_layer .swiper-pagination",
+						},
+					});
+					survey_swiper.on("slideChange", () => {
+						console.log('slideChange');
+						controlFunc();
+					});
+
+					propsButton();
+					if (!!btn_survey_close) {
+						btn_survey_close.addEventListener("click", () => {
+							survey_document_wrap.style.display = "none";
+							htmlElement.classList.remove("touchDis");
+						});
+					}
+
+					function controlFunc() {
+						/* console.log(survey_swiper.realIndex); */
+						if (survey_swiper.realIndex >= 1 && survey_swiper.realIndex < survey_swiper_slide_length - 1) {
+							swiper_pagination_layer.classList.add("active");
+							swiper_fraction_current.textContent = survey_swiper.realIndex;
+						} else {
+							swiper_pagination_layer.classList.remove("active");
+						}
+
+						/* if(survey_swiper.realIndex == survey_swiper_slide_length - 1){
+						    setTimeout(()=>{
+						        survey_document_wrap.style.display = "none";
+						        htmlElement.classList.remove("touchDis");
+						    },1500);
+						} */
+					}
+
+					function propsButton() {
+						const props_button = document.querySelectorAll(".props_button");
+						if (!!props_button) {
+							props_button.forEach((item) => {
+								item.addEventListener("click", (e) => {
+									const thisEvent = e.currentTarget;
+									const thisEventParent = thisEvent.closest(".props_item_list");
+									const notEvent = thisEvent.closest(".survey_form_list").querySelectorAll(".props_button");
+									if (!!notEvent && !thisEventParent) {
+										notEvent.forEach((item) => {
+											if (thisEvent !== item) {
+												item.classList.remove("active");
+											}
+										});
+									}
+									thisEvent.classList.toggle("active");
+								});
+							});
+						}
+					}
+				}
+			}
 		</script>
 		<!-- // survey -->
 	</div>
