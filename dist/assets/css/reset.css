@@ -60,6 +60,7 @@ img{vertical-align: top;max-width: 100%;}
 	}
 */
 /* common */
+.touchDis{touch-action: none;overflow:hidden;position:relative;}
 .clearboth{clear:both; display:block; content:'';}
 .hidden {overflow:hidden;position:absolute;top:-9999px;left:-9999px;width:1px;height:0;font-size:1px;}
 .hdtext {

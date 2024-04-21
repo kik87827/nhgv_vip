@@ -158,7 +158,6 @@
 				let member_layer_call = document.querySelectorAll(".member_layer_call");
 				if (!!member_layer_call) {
 					member_layer_call.forEach((item) => {
-						console.log(11);
 						item.addEventListener("click", (e) => {
 							e.preventDefault();
 							memberPopup.popupShow(); // show
@@ -230,6 +229,158 @@
 				</div>
 			</div>
 		</footer>
+
+		<!-- survey -->
+		<div class="survey_document_wrap">
+			<div class="survey_swiper_zone">
+				<div class="swiper-container survey">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="survey_gate_wrap">
+								<div class="survey_gate_top">
+									<div class="survey_gate_title_wrap">
+										<p class="survey_gate_title_main">NH투자증권</p>
+										<p class="survey_gate_title_sub">Premier Blue Members</p>
+									</div>
+									<p class="survey_gate_docu_title">만족도조사</p>
+								</div>
+								<div class="survey_gate_bottom">
+									<span class="survey_bottom_logo"><img src="./assets/images/survey/survey_logo.png" alt=""></span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="survey_docu_wrap">
+								<div class="survey_title_row">
+									<p class="survey_title_main"><span class="survey_title_bullet">01</span><span class="survey_title_liquid">수령 확인</span></p>
+									<p class="survey_title_sub">
+										<strong>NH투자증권 Premier Blue Members</strong>
+										기프트(바우처)는 이상 없이 잘 받으셨는지요?
+									</p>
+								</div>
+								<div class="survey_form_row">
+									<ul class="survey_form_list">
+										<li><button class="props_button">1. 네</button></li>
+										<li><button class="props_button">2. 아니요</button></li>
+										<li><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="survey_docu_wrap">
+								<div class="survey_title_row">
+									<p class="survey_title_main"><span class="survey_title_bullet">02</span><span class="survey_title_liquid">기프트 만족도</span></p>
+									<p class="survey_title_sub">
+										고객님께서 받으신 <br>
+										기프트(바우처)는 어떠셨는지요?
+									</p>
+								</div>
+								<div class="survey_form_row">
+									<ul class="survey_form_list">
+										<li><button class="props_button">1. 만족</button></li>
+										<li><button class="props_button">2. 보통</button></li>
+										<li><button class="props_button">3. 불만족</button></li>
+										<li><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="survey_docu_wrap">
+								<div class="survey_title_row">
+									<p class="survey_title_main"><span class="survey_title_bullet">03</span><span class="survey_title_liquid">기프트 선호도</span></p>
+									<p class="survey_title_sub">
+										향후 희망하거나 새롭게 추가되었으면 하는 카테고리를 선택해주세요. (중복선택 가능)
+									</p>
+								</div>
+								<div class="survey_form_row">
+									<ul class="survey_form_list">
+										<li>
+											<ul class="props_item_list">
+												<li><button class="props_button">다이닝</button></li>
+												<li><button class="props_button">호텔</button></li>
+												<li><button class="props_button">한우</button></li>
+												<li><button class="props_button">뷰티</button></li>
+												<li><button class="props_button">골프</button></li>
+												<li><button class="props_button">건강검진</button></li>
+												<li><button class="props_button">와인</button></li>
+												<li><button class="props_button">가전</button></li>
+												<li><button class="props_button">식품</button></li>
+												<li><button class="props_button">클래스</button></li>
+												<li><button class="props_button">캠핑</button></li>
+												<li><button class="props_button">리빙</button></li>
+												<li><button class="props_button">레저</button></li>
+												<li><button class="props_button">기타</button></li>
+											</ul>
+										</li>
+										<li><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="survey_docu_wrap">
+								<div class="survey_title_row">
+									<p class="survey_title_main"><span class="survey_title_bullet">04</span><span class="survey_title_liquid">향후 받고싶은 기프트가 있으면 말씀해 주세요.</span></p>
+									<p class="survey_title_sub">
+										향후 희망하거나 새롭게 추가되었으면 하는 카테고리를 선택해주세요. (중복선택 가능)
+									</p>
+								</div>
+								<div class="survey_form_row">
+									<ul class="survey_form_list">
+										<li><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="survey_docu_wrap">
+								<div class="survey_title_row">
+									<p class="survey_title_main"><span class="survey_title_bullet">04</span><span class="survey_title_liquid">향후 받고싶은 기프트가 있으면 말씀해 주세요.</span></p>
+									<p class="survey_title_sub">
+										향후 희망하거나 새롭게 추가되었으면 하는 카테고리를 선택해주세요. (중복선택 가능)
+									</p>
+								</div>
+								<div class="survey_form_row">
+									<ul class="survey_form_list">
+										<li><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="survey_docu_wrap type2">
+								<div class="survey_docu_inner">
+									<p class="survey_docu_message">소중한 의견<br>감사합니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper_pagination_layer">
+					<div class="swiper_pagination_cols">
+						<div class="swiper-pagination">
+
+						</div>
+					</div>
+					<div class="swiper_fraction_cols">
+						<span class="swiper_fraction_para">
+							<span class="swiper_fraction_current">1</span>
+							<span class="swiper_fraction_part">/</span>
+							<span class="swiper_fraction_length">4</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				surveyLayerFunc();
+			});
+		</script>
+		<!-- // survey -->
 	</div>
 </body>
 

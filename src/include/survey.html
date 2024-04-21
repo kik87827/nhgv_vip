@@ -1,5 +1,4 @@
 <div class="survey_document_wrap">
-    
     <div class="survey_swiper_zone">
         <div class="swiper-container survey">
             <div class="swiper-wrapper">
@@ -128,16 +127,23 @@
         </div>
         <div class="swiper_pagination_layer">
             <div class="swiper_pagination_cols">
-                <ul class="swiper_pagination_list">
-                    <li><a href="#" class="swiper_dot active"></a></li>
-                    <li><a href="#" class="swiper_dot"></a></li>
-                    <li><a href="#" class="swiper_dot"></a></li>
-                    <li><a href="#" class="swiper_dot"></a></li>
-                </ul>
+                <div class="swiper-pagination">
+
+                </div>
             </div>
             <div class="swiper_fraction_cols">
-                <span class="swiper_fraction_para">1/4</span>
+                <span class="swiper_fraction_para">
+                    <span class="swiper_fraction_current">1</span>
+                    <span class="swiper_fraction_part">/</span>
+                    <span class="swiper_fraction_length">4</span>
+                </span>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded",()=>{
+        surveyLayerFunc();
+    });
+</script>
