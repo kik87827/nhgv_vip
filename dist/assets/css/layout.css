@@ -98,12 +98,12 @@
 .middle_sub_map_list > li:last-of-type:after{display:none;}
 .middle_sub_map{color:#444444;}
 .sv_wrap{background:url("../images/bg_sv.jpg") no-repeat 100% 0/cover;position:relative;overflow:hidden;}
-.sv_wrap.skin2{background-image:url("../images/bg_sv2.png");min-height:210px;outline:1px solid #b0924f;outline-offset: -20px;}
-.sv_wrap.skin2:before,
+.sv_wrap.skin2{background-image:url("../images/bg_sv2.png");min-height:210px;/* outline:1px solid #b0924f;outline-offset: -20px; */}
+/* .sv_wrap.skin2:before,
 .sv_wrap.skin2:after{display:block;content:'';position:absolute;top:0;background-repeat:no-repeat;background-size:cover; background-position:0 0;}
 .sv_wrap.skin2:before{left:0;width:156px;height:176px;background-image:url("../images/ribon_01.png");}
-.sv_wrap.skin2:after{right:0;width:168px;height:100%;background-image:url("../images/ribon_02.png");}
-.sv_wrap.skin2 .sv_inner{padding:54px 71px;}
+.sv_wrap.skin2:after{right:0;width:168px;height:100%;background-image:url("../images/ribon_02.png");} */
+/* .sv_wrap.skin2 .sv_inner{padding:54px 71px;} */
 .sv_inner{padding:40px 60px;}
 .sv_logo{max-width:320px;}
 .sv_logo img{vertical-align: top;}
@@ -151,11 +151,11 @@
     .sc_wrap.type3{padding:25px 20px 0;}
 
     
-    .sv_wrap.skin2{min-height:210px;outline-offset: -15px;}
-    .sv_wrap.skin2:before{width:109.2px;height:123.2px;}
-    .sv_wrap.skin2:after{width:120px;height:120px;background-size:100% auto;top:auto;bottom:0;}
+    .sv_wrap.skin2{min-height:210px;/* outline-offset: -15px; */}
+   /*  .sv_wrap.skin2:before{width:109.2px;height:123.2px;}
+    .sv_wrap.skin2:after{width:120px;height:120px;background-size:100% auto;top:auto;bottom:0;} */
     .sv_inner{padding:30px 30px 100px;}
-    .sv_wrap.skin2 .sv_inner{padding:54px 50px;}
+    .sv_wrap.skin2 .sv_inner{padding:34px 30px;}
     .sv_copy{margin-top:20px;font-size:16px; line-height:1.5;}
     .sv_copy br{display:none;}
 
