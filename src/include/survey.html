@@ -103,7 +103,10 @@
                         <div class="survey_docu_inner">
                             <p class="survey_docu_message">소중한 의견<br>감사합니다.</p>
                         </div>
-                        <button class="btn_survey_close"></button>
+                        <div class="survey_docu_btn_row">
+                            <a href="javascript:void(0)" class="btn_control_box close_trigger">확인</a>
+                        </div>
+                        <!-- <button class="btn_survey_close"></button> -->
                     </div>
                 </div>
             </div>
@@ -143,6 +146,7 @@
         const survey_swiper_slide_length = survey_swiper_slide.length;
         const swiper_pagination_layer = document.querySelector(".swiper_pagination_layer");
         const btn_survey_close = document.querySelector(".btn_survey_close");
+        const close_trigger = document.querySelectorAll(".survey_swiper_zone .close_trigger");
         if(!!survey_swiper_container){
         
             swiper_fraction_length.textContent = survey_swiper_slide_length-2;
@@ -157,6 +161,7 @@
                 pagination: {
                     el: ".swiper_pagination_layer .swiper-pagination",
                 },
+                autoHeight : true
             });
             survey_swiper.on("slideChange",()=>{
                 console.log('slideChange');
@@ -164,10 +169,12 @@
             });
             
             propsButton();
-            if(!!btn_survey_close){
-                btn_survey_close.addEventListener("click",()=>{
-                    survey_document_wrap.style.display = "none";
-                    htmlElement.classList.remove("touchDis");
+            if(!!close_trigger){
+                close_trigger.forEach((item)=>{
+                    item.addEventListener("click",()=>{
+                        survey_document_wrap.style.display = "none";
+                        htmlElement.classList.remove("touchDis");
+                    });
                 });
             }
 
