@@ -140,9 +140,9 @@ input.form_input{font-size:14px;appearance: none;-webkit-appearance: none;line-h
 .member_guide_logo img{vertical-align: top;max-width: 282.5px;}
 .member_guide_logo_else{font-size:24px; font-weight:700; color:#b0924f;}
 .member_guide_text{font-size:18px; color:#555555; margin-top:2px;}
-.member_else_guide_para{font-size:18px; color:#555555; word-break: keep-all;margin:20px 15px 0;}
+.member_else_guide_para{font-size:18px; color:#555555; word-break: keep-all;margin:20px 0 0;}
 
-.pro_info_wrap{margin:40px 15px 0 15px;display:flex;gap:25px;}
+.pro_info_wrap{margin:40px 0 0 0;display:flex;gap:25px;}
 .pro_info_spec{flex:1;line-height:1.3;}
 .pro_info_spec_main{font-size:24px; font-weight:700; color:#b0924f;}
 .pro_info_spec_sub{margin-top:10px;font-size:18px; color:#555555;}

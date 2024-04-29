@@ -112,7 +112,7 @@
 
 .sc_wrap{padding:40px 60px 0;}
 .sc_wrap.type2{padding:0;}
-.sc_wrap.type3{padding:40px 0 0;}
+.sc_wrap.type3{padding:40px 60px 0;}
 
 @media (max-width:1023px){
     .header_util{max-width:200px}
